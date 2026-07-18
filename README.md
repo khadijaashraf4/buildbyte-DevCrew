@@ -1,149 +1,295 @@
-# ProofPath (MVP)
+# buildbyte-DevCrew
+ProofPath is a skills-first platform that enables students to build verified portfolios, earn verified work records, and connect with employers through a fair and transparent hiring process.
+# 🚀 ProofPath
 
-> **Tagline:** Prove your skills, not your privilege.
-
-ProofPath is a full-stack web application designed to reduce hiring biases by initially hiding candidate background identifiers (Name, Photo, University, Gender, Address) from recruiters. Employers can evaluate applicants strictly based on their projects, skills, and verified work history. Candidate identity details are only revealed after the candidate has been shortlisted.
-
----
-
-## Tech Stack
-
-- **Frontend:** React 18, Vite, Tailwind CSS v3, Axios, Lucide Icons, React Router DOM v6
-- **Backend:** Django 5, Django REST Framework, Django CORS Headers, SimpleJWT (JSON Web Token)
-- **Database:** SQLite
-- **Authentication:** JWT (JSON Web Tokens) with auto-refresh mechanism
+> **ProofPath** is a skills-first platform that enables students to build verified portfolios, complete skill assessments, receive verified work records, and connect with employers through a fair and transparent hiring process.
 
 ---
 
-## Directory Structure
+# 👥 Team Information
+
+**Team Name:** DevCrew
+
+## Team Members
+
+- **Khadija Ashraf**
+- **Ifrah Zulfiqar**
+- **Iqra Syed**
+
+---
+
+# 📖 Solution Overview
+
+ProofPath is a web platform that helps bridge the gap between students and employers by focusing on **verified skills instead of traditional resumes**.
+
+Students can showcase their abilities through verified portfolios, skill assessments, certifications, and work records. Employers can browse these verified profiles, evaluate candidates based on demonstrated skills, and hire with greater confidence.
+
+The platform encourages merit-based hiring while helping students build a professional digital identity from the beginning of their careers.
+
+---
+
+# 💡 Conceptual Explanation
+
+Many students have the skills required for jobs but struggle to demonstrate them through a traditional resume, especially when they have little or no work experience. At the same time, employers often find it difficult to identify capable candidates because resumes alone do not accurately reflect practical abilities.
+
+ProofPath was designed to solve this problem by shifting the focus from credentials to verified skills. Students can complete assessments, build portfolios, upload projects, and maintain verified work records that provide evidence of their abilities. Employers can then evaluate candidates based on these verified achievements instead of relying solely on academic qualifications or previous job experience.
+
+Our goal is to create a transparent and fair hiring ecosystem where talent is recognized through demonstrated skills, helping students gain opportunities while enabling employers to make informed hiring decisions.
+
+---
+
+# ✨ Features
+
+## Student Features
+
+- Student registration and secure login
+- Create and manage a professional profile
+- Upload projects and certifications
+- Build a verified portfolio
+- Select skills from the Skill Cloud
+- View work verification status
+- Browse recommended job opportunities
+- View job matching scores
+- Apply for jobs
+
+---
+
+## Employer Features
+
+- Employer registration and login
+- Employer dashboard
+- Browse verified student profiles
+- View portfolios and assessment results
+- Search students based on skills
+- Review applicants
+- Connect with qualified candidates
+
+---
+
+## General Features
+
+- Role-based authentication
+- Responsive user interface
+- Secure session management
+- Database-driven application
+- Modern dashboard experience
+
+---
+
+# 🧪 Sample Accounts
+
+The application includes pre-configured demo accounts for testing.
+
+| Role | Email | Password |
+|------|-------|----------|
+| **Student (Alex Mercer)** | `alex@student.com` | `password123` |
+| **Student (Sarah Jenkins)** | `sarah@student.com` | `password123` |
+| **Employer (TechCorp Inc. Recruiter)** | `recruiter@techcorp.com` | `password123` |
+
+---
+
+## 👨‍🎓 Student Demo Account (Alex Mercer)
+
+**Email:** `alex@student.com`
+
+**Password:** `password123`
+
+### Explore:
+
+- Student Dashboard
+- Manage Projects
+- View Portfolio
+- Check Work Verification Status
+- Select Skills from the Skill Cloud
+- Browse Jobs
+- View Job Match Scores
+- Apply for Jobs
+
+---
+
+## 👩‍🎓 Student Demo Account (Sarah Jenkins)
+
+**Email:** `sarah@student.com`
+
+**Password:** `password123`
+
+Use this account to explore the platform from another student's perspective.
+
+---
+
+## 🏢 Employer Demo Account
+
+**Company:** TechCorp Inc.
+
+**Email:** `recruiter@techcorp.com`
+
+**Password:** `password123`
+
+### Explore:
+
+- Employer Dashboard
+- Browse Student Profiles
+- Review Portfolios
+- View Skill Assessments
+- Search Candidates
+- Review Applicants
+
+---
+
+# 🛠 Technology Stack
+## Frontend
+
+- React.js
+- JavaScript 
+- HTML5
+- CSS3
+- Tailwind CSS
+- React Router DOM
+- Lucide React
+
+## Backend
+
+- Python
+- Django
+- Django REST Framework (DRF)
+
+## Database
+
+- SQLite
+
+## Authentication
+
+- Django Authentication
+- Token/JWT Authentication
+
+## Development Tools
+
+- Git
+- GitHub
+- Visual Studio Code
+- Vite
+- npm
+- pip
+
+
+---
+
+# ⚙️ Installation Instructions
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/proofpath.git
+```
+
+---
+
+## 2. Navigate into the project
+
+```bash
+cd proofpath
+```
+
+---
+
+## 3. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 4. Configure Environment Variables
+
+Create a `.env` file in the root directory.
+
+Example:
+
+```env
+DATABASE_URL=your_database_url
+SESSION_SECRET=your_secret_key
+PORT=5000
+```
+
+> **Never commit your actual secrets to GitHub.**
+
+---
+
+## 5. Start the development server
+
+```bash
+npm run dev
+```
+
+The application will run at:
 
 ```
-proofpath/
-├── backend/                # Django REST Framework backend
-│   ├── manage.py
-│   ├── proofpath_backend/  # Config
-│   └── api/                # Core business logic, models, serializers, views
-├── frontend/               # React frontend
-│   ├── src/                # Components, pages, contexts, services
-│   ├── index.html
-│   ├── vite.config.js
-│   └── tailwind.config.js
-└── README.md
+http://localhost:5000
 ```
 
 ---
 
-## Quick Setup Instructions
+# 📂 Project Structure
 
-### Prerequisites
-- Python 3.10+
-- Node.js v18+ & npm
-
----
-
-### 1. Backend Setup
-
-1. Open a terminal in the `backend/` directory:
-   ```bash
-   cd backend
-   ```
-2. Create and activate a Python virtual environment:
-   ```bash
-   python -m venv venv
-   # On Windows:
-   .\venv\Scripts\activate
-   # On macOS/Linux:
-   source venv/bin/activate
-   ```
-3. Install required packages:
-   ```bash
-   pip install django djangorestframework django-cors-headers djangorestframework-simplejwt
-   ```
-4. Run migrations to setup SQLite:
-   ```bash
-   python manage.py makemigrations api
-   python manage.py migrate
-   ```
-5. Seed the database with realistic sample data (includes mock skills, students, projects, jobs, applications, and work record verification requests):
-   ```bash
-   python manage.py seed_data
-   ```
-6. Run unit tests to verify:
-   ```bash
-   python manage.py test api
-   ```
-7. Start the backend development server:
-   ```bash
-   python manage.py runserver
-   ```
-   *The API will be live at `http://127.0.0.1:8000/api/`.*
+```
+ProofPath
+│
+├── client/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   └── hooks/
+│
+├── server/
+│
+├── shared/
+│
+├── attached_assets/
+│
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+├── drizzle.config.ts
+├── README.md
+└── .env
+```
 
 ---
 
-### 2. Frontend Setup
+# 🔐 Environment Variables
 
-1. Open a terminal in the `frontend/` directory:
-   ```bash
-   cd frontend
-   ```
-2. Install Node dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the Vite development server:
-   ```bash
-   npm run dev
-   ```
-   *The frontend dashboard will be running at `http://localhost:5173/`.*
+The following environment variables are required.
 
----
+| Variable | Description |
+|-----------|-------------|
+| DATABASE_URL | Database connection string |
+| SESSION_SECRET | Secret used for authentication |
+| PORT | Application server port |
 
-## Sample Accounts for Testing (Pre-seeded)
+**Example**
 
-Use these credentials to login and test different roles and bias-free mechanics:
+```env
+DATABASE_URL=your_database_url
+SESSION_SECRET=your_secret_key
+PORT=5000
+```
 
-### Students
-1. **Alex Mercer** (Full-Stack Student)
-   - **Email:** `alex@student.com`
-   - **Password:** `password123`
-   - **Pre-seeded Portfolio:** React, Python, Django, Tailwind CSS, Git. (100% Match for TechCorp's Python role)
-   - **Status:** Already has a Pending job application, a Shortlisted application, and a Verified work record.
-2. **Sarah Jenkins** (UI/UX Student)
-   - **Email:** `sarah@student.com`
-   - **Password:** `password123`
-   - **Pre-seeded Portfolio:** React, Figma, Tailwind CSS. (100% Match for DesignHub's UI/UX role)
+# 🚀 Future Improvements
 
-### Employers
-1. **TechCorp Inc. Recruiter**
-   - **Email:** `recruiter@techcorp.com`
-   - **Password:** `password123`
-   - **Features:** Has active job listings (React Developer, Python Backend Intern) and has applicants waiting.
-2. **DesignHub Studio Recruiter**
-   - **Email:** `recruiter@designhub.com`
-   - **Password:** `password123`
-   - **Features:** Has active volunteer role (Junior UI/UX Engineer) and Sarah applied.
+- AI-powered skill recommendations
+- AI-assisted resume builder
+- Interview scheduling
+- Real-time messaging
+- Company verification system
+- Advanced analytics dashboard
+- Blockchain-based certificate verification
+- Integrated job recommendation engine
+
 
 ---
 
-## Key Features Implemented
+# 📄 License
 
-### 1. Bias-Free Applicant Review
-When an employer logs in and reviews candidates for their job post:
-- If status is **Pending**, the API serializer overrides the user profile:
-  - Name is replaced with `Candidate #<id>`
-  - University shows `Hidden until Shortlisted & Identity Revealed`
-  - Gender/Address is returned as `Hidden`
-  - Photo is null/hidden.
-- The employer can see **Skills**, **Projects**, **Verified Work Records**, and **Match Percentage**.
-- Clicking **Shortlist** puts the candidate on the shortlisting track.
-- Once Shortlisted, the **Reveal Identity** button is unlocked. Clicking it makes a backend call to transition the application to **Revealed**, which immediately exposes the candidate's real name, school, photo, and bio!
-
-### 2. Real-Time Skill Matching
-- Opporunities query matching student profiles.
-- Match score is calculated on-the-fly: `Match % = (Matching Student Skills ÷ Required Skills) * 100`
-- Lists exact **Matched Skills** (green badges) and **Missing Skills** (slate badges), allowing students to immediately identify skill gaps.
-
-### 3. Work Verification requests
-- Students submit tasks/roles they performed.
-- Employers can verify work records from their dashboard and leave custom remarks.
-- Verified work records receive a shiny badge on the student's profile.
+This project was developed by **DevCrew** as part of a hackathon submission and is intended for educational and demonstration purposes.
